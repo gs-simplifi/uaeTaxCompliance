@@ -55,15 +55,55 @@
                 <div class="text-left">
                     <h2 class="section-heading">Section A</h2>
                     <h3 class="section-subheading">First things first! You are:</h3>
-                    <input type="radio" id="fz" class="form-check-input" name="fav_language" value="0">
+                    <input type="radio" id="fz" class="form-check-input group1" name="group1" value="0">
                     <label class="section-subheading" for="fz">An Entity in a Free Zone</label><br>
-                    <input type="radio" id="ffz" class="form-check-input" name="fav_language" value="1">
+                    <input type="radio" id="ffz" class="form-check-input group1" name="group1" value="1">
                     <label for="ffz">A branch of a Foreign Entity, registered in Free Zone</label><br>
-                    <input type="radio" id="mfz" class="form-check-input" name="fav_language" value="2">
+                    <input type="radio" id="mfz" class="form-check-input group1" name="group1" value="2">
                     <label for="mfz">A branch of a Main Land Entity, registered in Free Zone</label><br>
-                    <input type="radio" id="nfz" class="form-check-input" name="fav_language" value="3">
+                    <input type="radio" id="nfz" class="form-check-input group1" name="group1" value="3">
                     <label for="nfz">None of the above</label>
 
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="page-section invisible" id="sectionElect">
+            <div class="container">
+                <div class="text-left">
+                    <h2 class="section-heading">Section B: Elections and Previous Years</h2>
+                    <h3 class="section-subheading">Will you answer Yes to any of the following questions?</h3>
+                    <ol>
+                        <li class="section-subheading">I want to elect to be taxed at general rate.</li>
+                        <li class="section-subheading">In the past 4 Financial years, I have elected to be taxed at general rate.</li>
+                        <li class="section-subheading">In the past 4 Financial years, I was not qualified as QFZP.</li>
+                    </ol>
+                    <input type="radio" id="electYes" class="form-check-input group2" name="group2" value="1">
+                    <label class="section-subheading" for="electYes">Yes to atleast one of the above</label><br>
+                    <input type="radio" id="electNo" class="form-check-input group2" name="group2" value="3">
+                    <label for="electNo">None of the above</label>
+        
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="page-section invisible" id="sectionRequirements">
+            <div class="container">
+                <div class="text-left">
+                    <h2 class="section-heading">Section B-2: QFZP Requirements</h2>
+                    <h3 class="section-subheading">Do you meet all of the below requirements?</h3>
+                    <ul>
+                        <li class="section-subheading">Maintain CIGA, Adequate assets, and employees in FZ</li>
+                        <li class="section-subheading">Compiles with the requirements of Transfer Pricing</li>
+                        <li class="section-subheading">Prepares audited financial statements</li>
+                    </ul>
+                    <input type="radio" id="requireYes" class="form-check-input group3" name="group3" value="1">
+                    <label class="section-subheading" for="requireYes">Yes to ALL of the above</label><br>
+                    <input type="radio" id="requireNo" class="form-check-input group3" name="group3" value="3">
+                    <label for="requireNo">No to atleast one of the above</label>
+        
                 </div>
         
             </div>
@@ -76,8 +116,51 @@
                     <h3 class="section-subheading">Your Corporate Tax is calculated @ 9% rate, with AED 375,000 threshold.</h3>
                     <label class="section-subheading">Total Income in Financial Year:  <input type="number" id="incomeOptionD" name="incomeOptionDName" class="input-group-sm"></label>
                     <h3 class="section-subheading">Approximate Tax: <span id="calculatedTaxOptionD"></span></h3>
-                    <h3 class="section-subheading">This impact assessment and tax calculations are approximate, based on user inputs. For professional advice, contact us
-                    at: help@uaetaxzone.tech</h3>
+                    
+                    
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="page-section invisible" id="optionAresult">
+            <div class="container">
+                <div class="text-left">
+                    <h2 class="section-heading">Final Step</h2>
+                    <h3 class="section-subheading">This step requires your Revenue and Income to determine your status and caluclate your tax.</h3>
+                    <h4 class="section-subheading">Section C1: Revenue / Income from FZP Customers (Free Zone Persons)</h4>
+                    <label class="section-subheading">REVENUE from Excluded Activity<a href="excludedActivity.html" target="_blank">&#8505;</a>: <input type="number" id="c1Rev1"
+                            name="c1Rev1" class="input-group-sm"></label><br>
+                    <label class="section-subheading">INCOME from Excluded Activity<a href="excludedActivity.html" target="_blank">&#8505;</a>: <input type="number" id="c1Inc1" name="c1Inc1"
+                                    class="input-group-sm"></label><br>
+                    <label class="section-subheading">Other REVENUE from FZP: <input type="number" id="c1Rev2" name="c1Rev2"
+                            class="input-group-sm"></label><br>
+                    <label class="section-subheading">Other INCOME from FZP: <input type="number" id="c1Inc2" name="c1Inc2"
+                            class="input-group-sm"></label><br>
+                    <h4 class="section-subheading">Section C2: Revenue / Income from NFZP Customers (Non - Free Zone Persons)</h4>
+                    <label class="section-subheading">REVENUE from Qualified Activity<a href="qualifyinActivity.html" target="_blank">&#8505;</a>, but not excluded activity<a href="excludedActivity.html" target="_blank">&#8505;</a>: <input type="number" id="c2Rev1" name="c2Rev1"
+                            class="input-group-sm"></label><br>
+                    <label class="section-subheading">INCOME from Qualified Activity<a href="qualifyinActivity.html" target="_blank">&#8505;</a>, but not excluded activity<a href="excludedActivity.html" target="_blank">&#8505;</a>: <input type="number" id="c2Inc1" name="c2Inc1"
+                            class="input-group-sm"></label><br>
+                    <label class="section-subheading">Other REVENUE from NFZP: <input type="number" id="c2Rev2" name="c2Rev2"
+                            class="input-group-sm"></label><br>
+                    <label class="section-subheading">Other INCOME from NFZP: <input type="number" id="c2Inc2" name="c2Inc2"
+                            class="input-group-sm"></label><br>
+
+                            <br> <br>
+                    <h4 class="section-subheading">Approximate Tax: <span id="calculatedTaxOptionA">All inputs are necessary to determine status and tax.</span></h4>        
+        
+                </div>
+        
+            </div>
+        </section>
+
+        <section class="page-section invisible" id="disclaimer">
+            <div class="container">
+                <div class="text-left">
+                    <h3 class="section-subheading">This impact assessment and tax calculations are approximate, based on user
+                        inputs. For professional advice, contact us
+                        at: help@uaetaxzone.tech</h3>
                     <h3 class="section-subheading">Based on your company, following compliance requirements may also apply:</h3>
                     <h5>Accounting</h5>
                     <h5>Audits, based on Turnover</h5>
@@ -85,8 +168,8 @@
                     <h5>Documentation</h5>
                     <h5>Transition Provisions</h5>
                     <h5>Other Filing requirements</h5>
-                    
-                    
+        
+        
                 </div>
         
             </div>
